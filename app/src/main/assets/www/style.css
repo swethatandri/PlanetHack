@@ -1,0 +1,55 @@
+#heading{
+
+
+   margin-top: 80px;
+
+   text-align: center;
+
+   font-family: Helvetica;
+
+   border: 5px black solid;
+
+   background-color: white;
+
+}
+
+#heading h1{
+ margin-top: 20;
+}
+
+#navbar
+{
+   background-color: pink;
+   color: white;
+}
+
+#navbar ul
+{
+   padding: 0;
+   list-style: none;
+
+}
+
+#navbar li
+{
+  display: inline;
+
+}
+
+#navbar a
+{
+  color: black;
+  text-decoration: underline;
+
+  font-size: 15px;
+
+  padding-right: 15px;
+
+}
+
+body{
+
+  background-color: pink;
+
+}
+
