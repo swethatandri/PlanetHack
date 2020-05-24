@@ -91,7 +91,7 @@
 	<img src="headericon.png" width="150" class="icon">
 </header>
 
-<body onload= "Test()" >
+<body >
 <p id="sched">Health Log </p>
 
 <div id="schedulemain">
@@ -101,34 +101,34 @@
 <form>
 			<label class="title">Date:</label>
 
-			<input type="text" name="input" placeholder="YY/MM/DD">
+			<input type="text" id = "dat" name="input" placeholder="YY/MM/DD">
 	</div>
 
 	<div id="symptoms" class="schedulemain">
 			<label for="symptoms" class="title">Symptoms:</label>
 		<div id="s-options">
-			<input type="radio" id="none" name="none" value="none">
+			<input type="radio" id="none" name="symptoms" value="none">
  			<label for="none" class="s-options">None</label><br>
 
-			<input type="radio" id="fever" name="fever" value="fever">
+			<input type="radio" id="fever" name="symptoms" value="fever">
  			<label for="fever">Fever</label><br>
 
-			<input type="radio" id="drycough" name="drycough" value="drycough">
+			<input type="radio" id="drycough" name="symptoms" value="drycough">
  			<label for="drycough">Dry Cough</label><br>
 
-			<input type="radio" id="tiredness" name="tiredness" value="tiredness">
+			<input type="radio" id="tiredness" name="symptoms" value="tiredness">
  			<label for="tiredness">Tiredness</label><br>
 
-			<input type="radio" id="diffbreath" name="diffbreathing" value="diffbreath">
+			<input type="radio" id="diffbreath" name="symptoms" value="diffbreath">
  			<label for="diffbreath">Difficulty of Breathing</label><br>
 
-			<input type="radio" id="chestpain" name="chestpain" value="chestpain">
+			<input type="radio" id="chestpain" name="symptoms" value="chestpain">
  			<label for="chestpain">Chestpain</label><br>
 
-			<input type="radio" id="sorethroat" name="sorethroat" value="sorethroat">
+			<input type="radio" id="sorethroat" name="symptoms" value="sorethroat">
  			<label for="sorethroat">Sore Throat</label><br>
 
-			<input type="radio" id="headache" name="headache" value="headache">
+			<input type="radio" id="headache" name="symptoms" value="headache">
  			<label for="headache">Headaches</label><br>
 		</div>
 		
@@ -139,7 +139,7 @@
 		
 			<label for="mood" class="title">Mood:</label>
 
-			<select name="mood" id="mood">
+			<select name="mood" id="mood1">
 				 <option value="" disabled selected>Choose</option>
 				<option value="happy">Happy</option>
 				<option value="sad">Sad</option>
@@ -153,7 +153,7 @@
 	<div id="water" class="schedulemain">
 	
 			<label for="water" class="title">Water Intake:</label>
-			<input type="number" id="water" name="water" min="0">
+			<input type="text" id="H2X" name="water" min="0">
 	
 	</div>
 
@@ -212,17 +212,54 @@
 	<p id="demo"> </p>
 
 	<script>
-    function myFunction() {
-    var x = document.getElementById("day").value;
-    alert(x);
+	function myFunction() {
+
+    var x = "";
+
+    alert("start");
+
+	var symptoms = document.getElementsByName('symptoms');
+
+          for(i = 0; i < symptoms.length; i++) {
+              if(symptoms[i].checked){
+                x += "\n" + symptoms[i].value;
+              }
+
+
+      }
+
+	alert("after symptom:" + x);
+
+
+   	x += "\n" + document.getElementById("dat").value;
+
+  	alert("dat = " + x);
+
+
+    selectElement =  document.querySelector('#mood1');
+
+	x += "\n" + selectElement.value;
+	alert("mood = " + x );
+
+ 	var s_options = document.getElementsByName('s-options');
+
+    for(i = 0; i < s_options.length; i++) {
+    	if(s_options[i].checked)
+        	x += "\n" + s_options[i].value;
+    }
+  	alert("s_options = " + x);
+
+  	//x += "\n" + = document.getElementById("H2X").value;
+	//alert("h2o = " + x );
+
+
+   	x += "\n" + document.getElementById("day").value;
+   	alert("day" + x);
     document.getElementById("demo").innerHTML = x;
 
 }
 
-   function Test()
-   {
-     alert("Hello world");
-   }
+
 </script>
 </div>
 
