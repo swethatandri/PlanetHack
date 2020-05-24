@@ -12,7 +12,7 @@
 	}	
 
 	#reminder{
-		text-align: left;
+		text-align: center;
 		letter-spacing: 3px;
 		font-size: 35px;
 		width: 100%;
@@ -73,15 +73,15 @@
 
 <div id="codeproper">
 
-	<p id="reminder">WASH YOUR HANDS REMINDER</p>
+	<p id="reminder">WASH YOUR HANDS HELP</p>
 	<p class="fill">STAY SAFE, STAY SANITARY!</p>
 
 	<div class="a"> 
-	<p>Receive reminders of when to wash your hands. Every how many hours would you like to get reminded?	</div>
+	<p> Enter the time increments in which you wash your hands, and we will provide feedback!	</div>
 
 	<div id= "interval">
 	<form>
-	<p class="remind">  ENTER TIME INTERVAL </p>
+	<p class="remind">  ENTER TIME INTERVAL IN HOURS </p>
 
 	<label for="interval" class="hour">Hour</label>
 			<input type="number" id="hour" name="interval" min="0" max="24">
@@ -100,6 +100,23 @@
 <script>
 	function timeFunc() {
     var t = parseInt(document.getElementById("hour").value);
+
+    if(t <= 3)
+    {
+       document.getElementById("demo").innerHTML = "We recommend washing your hands in larger time increments!";
+    }
+
+    else if(t >= 7)
+    {
+      document.getElementById("demo").innerHTML = "Wash your hands in smaller time increments!";
+    }
+
+    else
+    {
+      document.getElementById("demo").innerHTML = "That is a reasonable increment. Keep up the good work!";
+    }
+
+
 
 
     }
