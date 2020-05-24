@@ -87,12 +87,23 @@
 			<input type="number" id="hour" name="interval" min="0" max="24">
 
 	
-	<button type="submit" value="time" id="submit">SET</button>
+	<button type="button" value="time" id="submit" onclick="timeFunc()">SET</button>
 	</form>
 	</div>
 	
-	
+
+
 </div>
+
+<p id = "demo"> </p>
+
+<script>
+	function timeFunc() {
+    var t = parseInt(document.getElementById("hour").value);
+
+
+    }
+</script>
 
 <footer>
 	<nav id = "navbar">
