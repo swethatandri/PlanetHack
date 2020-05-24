@@ -1,372 +1,163 @@
 <!DOCTYPE>
 
 <html>
+<head>
+	<link rel="stylesheet" type="text/css" href="style.css">
 
-<header>
+<style>
+	body{
+		font-family: "Futura", sans-serif;
+		margin: 0;
+		padding: 0;
+	}	
 
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <nav id = "navbar">
-        <ul>
+	#reminder{
+		text-align: left;
+		letter-spacing: 3px;
+		font-size: 35px;
+		width: 100%;
 
-            <li> <a href = "index.html" > Home </a> </li>
-            <li> <a href = "about.html" > About </a> </li>
-            <li> <a href = "schedule.html" > Your Health Journal </a> </li>
+	}
 
-        </ul>
-    </nav>
+	.fill{
+		text-align: left;
+		letter-spacing: 3px;
+		font-size: 16px;
+		text-indent: 3%;
+		width: 100%;
+		background-color: #f1b2b8;
+		border-radius: 2em;
+		line-height: 40px;
+		width: 40%;
+		text-align: center;
+	}
 
-</header>
+	#codeproper{
+		margin-left: 3%;
+		font-family: "Futura", sans-serif;
+		text-transform: uppercase;
+	}
+
+	p.remind{
+		color: #f1b2b8;
+		font-size: 16px;
+		letter-spacing: 3px;
+	}
+
+	label{
+		letter-spacing: 5px;
+		font-size: 13px;
+	}
+
+	.a{
+		letter-spacing: 3px;
+	}
+
+	form button{
+		background-color: #f1b2b8;
+		border-radius: 2em;
+		border: #f1b2b8 solid;
+		font-family: "Futura", sans-serif;
+		letter-spacing: 1px;
+		
+	}
+</style>
+
+</head>
 
 <body>
 
-<h1> <b> Wash Your Hands Reminder!  </b> </h1>
+<header>
+	<img src="headericon.png" width="150" class="icon">
+</header>
 
-<h2>  <b>  Stay Safe, Stay Sanitary! </b> </h2>
+<div id="codeproper">
 
-<h3> Receive reminders of when to wash your hands, depending on your daily schedule. </h3>
+	<p id="reminder">WASH YOUR HANDS REMINDER</p>
+	<p class="fill">STAY SAFE, STAY SANITARY!</p>
 
+	<div class="a"> 
+	<p>Receive reminders of when to wash your hands, depending on your daily schedule.</p> 
+	</div>
 
-<div class = "reminders1" >
-<p>  Breakfast  </p>
+	<div id= "breakfast">
+	<form>
+	<p class="remind">  Breakfast  </p>
+
+	<label for="breakfast" class="hour">Hour</label>
+			<input type="number" id="hour" name="water" min="0" max="24">
+
+	<label for="breakfast" class="minutes">Minutes</label>
+			<input type="number" id="hour" name="water" min="0" max="60">
+	
+	<button type="submit" value="time" id="submit">TIME</button>
+	</form>
+	</div>
+	
+	<br>
+
+	<div id= "lunch">
+	<form>
+	<p class="remind">  Lunch  </p>
+
+	<label for="lunch" class="hour">Hour</label>
+			<input type="number" id="hour" name="water" min="0" max="24">
+
+	<label for="lunch" class="minutes">Minutes</label>
+			<input type="number" id="hour" name="water" min="0" max="60">
+	<button type="submit" value="time" id="submit">TIME</button>
+	</form>
+	</div>
+	
+	<br>
+
+	<div id= "dinner">
+	<form>
+	<p class="remind">  Dinner  </p>
+
+	<label for="dinner" class="hour">Hour</label>
+			<input type="number" id="hour" name="water" min="0" max="24">
+
+	<label for="dinner" class="minutes">Minutes</label>
+			<input type="number" id="hour" name="water" min="0" max="60">
+	<button type="submit" value="time" id="submit">TIME</button>
+	</form>
+	</div>
+	
+	<br>
+
+	<p class="fill">IF YOU WILL BE EXPOSED TO OUTDOORS</p>
+
+	<div class="a"> 
+	<p>Exposure to outdoors increases the risk of contracting covid-19.</p> 
+	</div>
+	
+	<div id= "othertimer1">
+	<form>
+	<p class="remind">  REMIND YOURSELF TO WASH YOUR HANDS  </p>
+
+	<label for="dinner" class="hour">Hour</label>
+			<input type="number" id="hour" name="water" min="0" max="24">
+
+	<label for="dinner" class="minutes">Minutes</label>
+			<input type="number" id="hour" name="water" min="0" max="60">
+	<button type="submit" value="time" id="submit">TIME</button>
+	</form>
+	</div>
+	
 </div>
 
-<div class = "reminders2">
+<footer>
+	<nav id = "navbar">
+		<ul>
+		<li> <a href = "index.html" > <img src="home.png" width="30%"> </a> </li>
+		<li> <a href = "schedule.html" > <img src="journal.png" width="30%"> </a> </li>
+		<li> <a href = "reminders.html" > <img src="schedule.png" width="30%"> </a> </li>
 
-   <div class="dropdown">
-      <button class="dropbtn">Time </button>
-         <div class="dropdown-content">
-           <a href="#">0:00</a>
-           <a href="#"> 0:30</a>
-           <a href="#"> 1:00</a>
-           <a href="#">1:30</a>
-           <a href="#">2:00</a>
-           <a href="#">2:30</a>
-           <a href="#">3:00</a>
-           <a href="#">3:30</a>
-           <a href="#">4:00</a>
-           <a href="#">4:30</a>
-           <a href="#">5:00</a>
-           <a href="#">5:30</a>
-           <a href="#">6:00</a>
-           <a href="#">6:30</a>
-           <a href="#">7:00</a>
-           <a href="#">7:30</a>
-           <a href="#">8:00</a>
-           <a href="#">8:30</a>
-           <a href="#">9:00</a>
-           <a href="#">9:30</a>
-           <a href = "#>"> 10:00</a>
-           <a href="#">)10:30</a>
-           <a href="#">11:00</a>
-           <a href="#">)11:30</a>
-           <a href="#">12:00</a>
-           <a href="#">)12:30</a>
-           <a href="#"> 13:00</a>
-           <a href="#">)13:30</a>
-           <a href="#">14:00</a>
-           <a href="#">)14:30</a>
-           <a href="#">15:00</a>
-           <a href="#">15:30</a>
-           <a href="#">16:00</a>
-           <a href="#">16:30</a>
-           <a href="#">17:00</a>
-           <a href="#">17:30</a>
-           <a href="#">18:00</a>
-           <a href="#">18:30</a>
-           <a href="#">19:00</a>
-           <a href="#">19:30</a>
-           <a href="#">20:00</a>
-           <a href="#">20:30</a>
-           <a href="#">21:00</a>
-           <a href="#">21:30</a>
-           <a href="#">22:00</a>
-           <a href="#">22:30</a>
-           <a href="#"> 23:00</a>
-           <a href="#">23:30</a>
+		</ul>
+	</nav>
 
-      </div>
-   </div>
-</div>
-
-
-<div class= "clr">
-
-</div>
-<br>
-
-<div class = "reminders1" >
-    <p>  Lunch  </p>
-</div>
-
-<div class = "reminders2">
-
-    <div class="dropdown">
-        <button class="dropbtn">Time </button>
-        <div class="dropdown-content">
-            <a href="#">0:00</a>
-            <a href="#"> 0:30</a>
-            <a href="#"> 1:00</a>
-            <a href="#">1:30</a>
-            <a href="#">2:00</a>
-            <a href="#">2:30</a>
-            <a href="#">3:00</a>
-            <a href="#">3:30</a>
-            <a href="#">4:00</a>
-            <a href="#">4:30</a>
-            <a href="#">5:00</a>
-            <a href="#">5:30</a>
-            <a href="#">6:00</a>
-            <a href="#">6:30</a>
-            <a href="#">7:00</a>
-            <a href="#">7:30</a>
-            <a href="#">8:00</a>
-            <a href="#">8:30</a>
-            <a href="#">9:00</a>
-            <a href="#">9:30</a>
-            <a href = "#"> 10:00</a>
-            <a href="#">)10:30</a>
-            <a href="#">11:00</a>
-            <a href="#">)11:30</a>
-            <a href="#">12:00</a>
-            <a href="#">)12:30</a>
-            <a href="#"> 13:00</a>
-            <a href="#">)13:30</a>
-            <a href="#">14:00</a>
-            <a href="#">)14:30</a>
-            <a href="#">15:00</a>
-            <a href="#">15:30</a>
-            <a href="#">16:00</a>
-            <a href="#">16:30</a>
-            <a href="#">17:00</a>
-            <a href="#">17:30</a>
-            <a href="#">18:00</a>
-            <a href="#">18:30</a>
-            <a href="#">19:00</a>
-            <a href="#">19:30</a>
-            <a href="#">20:00</a>
-            <a href="#">20:30</a>
-            <a href="#">21:00</a>
-            <a href="#">21:30</a>
-            <a href="#">22:00</a>
-            <a href="#">22:30</a>
-            <a href="#"> 23:00</a>
-            <a href="#">23:30</a>
-
-        </div>
-    </div>
-</div>
-
-<div class= "clr">
-
-</div>
-
-<br>
-
-<div class = "reminders1" >
-    <p>  Dinner  </p>
-</div>
-
-<div class = "reminders2">
-
-    <div class="dropdown">
-        <button class="dropbtn">Time </button>
-        <div class="dropdown-content">
-            <a href="#">0:00</a>
-            <a href="#"> 0:30</a>
-            <a href="#"> 1:00</a>
-            <a href="#">1:30</a>
-            <a href="#">2:00</a>
-            <a href="#">2:30</a>
-            <a href="#">3:00</a>
-            <a href="#">3:30</a>
-            <a href="#">4:00</a>
-            <a href="#">4:30</a>
-            <a href="#">5:00</a>
-            <a href="#">5:30</a>
-            <a href="#">6:00</a>
-            <a href="#">6:30</a>
-            <a href="#">7:00</a>
-            <a href="#">7:30</a>
-            <a href="#">8:00</a>
-            <a href="#">8:30</a>
-            <a href="#">9:00</a>
-            <a href="#">9:30</a>
-            <a href = "#>"> 10:00</a>
-            <a href="#">)10:30</a>
-            <a href="#">11:00</a>
-            <a href="#">)11:30</a>
-            <a href="#">12:00</a>
-            <a href="#">)12:30</a>
-            <a href="#"> 13:00</a>
-            <a href="#">)13:30</a>
-            <a href="#">14:00</a>
-            <a href="#">)14:30</a>
-            <a href="#">15:00</a>
-            <a href="#">15:30</a>
-            <a href="#">16:00</a>
-            <a href="#">16:30</a>
-            <a href="#">17:00</a>
-            <a href="#">17:30</a>
-            <a href="#">18:00</a>
-            <a href="#">18:30</a>
-            <a href="#">19:00</a>
-            <a href="#">19:30</a>
-            <a href="#">20:00</a>
-            <a href="#">20:30</a>
-            <a href="#">21:00</a>
-            <a href="#">21:30</a>
-            <a href="#">22:00</a>
-            <a href="#">22:30</a>
-            <a href="#"> 23:00</a>
-            <a href="#">23:30</a>
-
-        </div>
-    </div>
-</div>
-<
-<div class= "clr">
-
-</div>
-<br>
-
-<h3> If you left your house... </h3>
-<div class = "reminders1" >
-    <p>  Set a handwash reminder for your return time!  </p>
-</div>
-
-<div class = "reminders2">
-
-    <div class="dropdown">
-        <button class="dropbtn">Time </button>
-        <div class="dropdown-content">
-            <a href="#">0:00</a>
-            <a href="#"> 0:30</a>
-            <a href="#"> 1:00</a>
-            <a href="#">1:30</a>
-            <a href="#">2:00</a>
-            <a href="#">2:30</a>
-            <a href="#">3:00</a>
-            <a href="#">3:30</a>
-            <a href="#">4:00</a>
-            <a href="#">4:30</a>
-            <a href="#">5:00</a>
-            <a href="#">5:30</a>
-            <a href="#">6:00</a>
-            <a href="#">6:30</a>
-            <a href="#">7:00</a>
-            <a href="#">7:30</a>
-            <a href="#">8:00</a>
-            <a href="#">8:30</a>
-            <a href="#">9:00</a>
-            <a href="#">9:30</a>
-            <a href = "#>"> 10:00</a>
-            <a href="#">)10:30</a>
-            <a href="#">11:00</a>
-            <a href="#">)11:30</a>
-            <a href="#">12:00</a>
-            <a href="#">)12:30</a>
-            <a href="#"> 13:00</a>
-            <a href="#">)13:30</a>
-            <a href="#">14:00</a>
-            <a href="#">)14:30</a>
-            <a href="#">15:00</a>
-            <a href="#">15:30</a>
-            <a href="#">16:00</a>
-            <a href="#">16:30</a>
-            <a href="#">17:00</a>
-            <a href="#">17:30</a>
-            <a href="#">18:00</a>
-            <a href="#">18:30</a>
-            <a href="#">19:00</a>
-            <a href="#">19:30</a>
-            <a href="#">20:00</a>
-            <a href="#">20:30</a>
-            <a href="#">21:00</a>
-            <a href="#">21:30</a>
-            <a href="#">22:00</a>
-            <a href="#">22:30</a>
-            <a href="#"> 23:00</a>
-            <a href="#">23:30</a>
-
-        </div>
-    </div>
-</div>
-
-<div class= "clr">
-
-</div>
-
-<br>
-
-<div class = "reminders1" >
-    <p>  Set a handwash reminder for your return time!  </p>
-</div>
-
-<div class = "reminders2">
-
-    <div class="dropdown">
-        <button class="dropbtn">Time </button>
-        <div class="dropdown-content">
-            <a href="#">0:00</a>
-            <a href="#"> 0:30</a>
-            <a href="#"> 1:00</a>
-            <a href="#">1:30</a>
-            <a href="#">2:00</a>
-            <a href="#">2:30</a>
-            <a href="#">3:00</a>
-            <a href="#">3:30</a>
-            <a href="#">4:00</a>
-            <a href="#">4:30</a>
-            <a href="#">5:00</a>
-            <a href="#">5:30</a>
-            <a href="#">6:00</a>
-            <a href="#">6:30</a>
-            <a href="#">7:00</a>
-            <a href="#">7:30</a>
-            <a href="#">8:00</a>
-            <a href="#">8:30</a>
-            <a href="#">9:00</a>
-            <a href="#">9:30</a>
-            <a href = "#>"> 10:00</a>
-            <a href="#">10:30</a>
-            <a href="#">11:00</a>
-            <a href="#">11:30</a>
-            <a href="#">12:00</a>
-            <a href="#">12:30</a>
-            <a href="#"> 13:00</a>
-            <a href="#">13:30</a>
-            <a href="#">14:00</a>
-            <a href="#">14:30</a>
-            <a href="#">15:00</a>
-            <a href="#">15:30</a>
-            <a href="#">16:00</a>
-            <a href="#">16:30</a>
-            <a href="#">17:00</a>
-            <a href="#">17:30</a>
-            <a href="#">18:00</a>
-            <a href="#">18:30</a>
-            <a href="#">19:00</a>
-            <a href="#">19:30</a>
-            <a href="#">20:00</a>
-            <a href="#">20:30</a>
-            <a href="#">21:00</a>
-            <a href="#">21:30</a>
-            <a href="#">22:00</a>
-            <a href="#">22:30</a>
-            <a href="#"> 23:00</a>
-            <a href="#">23:30</a>
-
-        </div>
-    </div>
-</div>
-
-<div class= "clr">
-
-</div>
-
-<br>
-
-
+</footer>
 
 
 </body>
