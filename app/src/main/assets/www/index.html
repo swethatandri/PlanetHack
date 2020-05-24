@@ -1,35 +1,67 @@
 <!DOCTYPE>
 
 <html>
+<head>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<style>
+	body{
+		font-family: "Futura", sans-serif;
+		margin: 0;
+		padding: 0;
+		text-transform: uppercase;
+	}
+
+	img#lifebalance{
+		display: block;
+		margin: auto;
+	}
+
+	p#welcome{
+		text-align: center;
+		font-size: 25px;
+		letter-spacing: 5px;
+	}
+
+	p#lifebalance{
+		text-align: center;
+		font-size: 35px;
+		letter-spacing: 5px;
+
+	}
+</style>
+<body>
 
 <header>
+	<img src="headericon.png" width="150" class="icon">
+</header>
 
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <nav id = "navbar">
-        <ul>
-
-         <li> <a href = "about.html" > About </a> </li>
-         <li> <a href = "schedule.html" > Your Health Journal </a> </li>
-         <li> <a href = "reminders.html" > Your Schedule </a> </li>
-
-        </ul>
-    </nav>
-
-  </header>
-
-  <body>
 
   <div id = "heading">
 
-    <h1> Welcome To </h1>
+    <p id="welcome"> Welcome To </p>
 
 
-    <img src = "IMG_3205.jpg ">
+    <img src = "IMG_3205.jpg" id="lifebalance">
 
-    <h1> LifeBalance </h1>
+    <p id="lifebalance"> LifeBalance </p>
 
   </div>
 
-  </body>
+<footer>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<nav id = "navbar">
+		<ul>
+
+		<li> <a href = "index.html" > <img src="home.png" width="30%"> </a> </li>
+		<li> <a href = "schedule.html" > <img src="journal.png" width="30%"> </a> </li>
+		<li> <a href = "reminders.html" > <img src="schedule.png" width="30%"> </a> </li>
+
+		</ul>
+	</nav>
+
+</footer>
+
+</body>
 
 </html>
