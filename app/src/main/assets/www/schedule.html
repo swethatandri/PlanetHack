@@ -10,17 +10,52 @@
 	p#sched{
 		text-align: left;
 		letter-spacing: 3px;
-		font-size: 22px;
+		font-size: 35px;
+		margin-left: 3%;
+		width: 100%;
 	}
 
 	#schedulemain{
-		background-color: #f1b2b8;
-		padding: 2%;
-		width: 70%;
+		//background-color: #f1b2b8;
+		width: 90%;
 		display: inline-block;
 		text-align: left;
-		border-radius: 3em;
+		border-radius: 2em;
+		margin: 0% 3% 3% 3%;
+		line-height: 40px;
 		
+	}
+
+	form label.title{
+		color: #f1b2b8;
+		text-transform: uppercase;
+		letter-spacing: 5px;
+		font-size: 16px;
+	}
+
+	#s-options{
+		color: black;
+		text-transform: uppercase;
+		letter-spacing: 3px;
+		font-size: 13px;
+	}
+
+	button#reset, button#submit{
+		background-color: #f1b2b8;
+		padding: 10px;
+		border-radius: 2em;
+		font-family: "Futura", sans-serif;
+		text-transform: uppercase;
+		letter-spacing: 3px;
+		text-align: center;
+		width: 49.4%;
+		border:#f1b2b8 solid;
+	}
+
+	#entry textarea{
+		width: 100%;
+		border-radius: 1em;
+		padding: 10px;
 	}
 </style>
 
@@ -33,69 +68,116 @@
 	
 	<div id="date">
 		<form>
-			Date:
+			<label class="title">Date:</label>
 
 			<input type="text" name="input" placeholder="YYYY/MM/DD" required
 			pattern="(?:19|20)\[0-9\]{2}-(?:(?:0\[1-9\]|1\[0-2\])-(?:0\[1-9\]|1\[0-9\]|2\[0-9\])|(?:(?!02)(?:0\[1-9\]|1\[0-2\])-(?:30))|(?:(?:0\[13578\]|1\[02\])-31))" 
-title="Enter a date in this format YYYY-MM-DD"/>
-		</form>
+			title="Enter a date in this format YYYY-MM-DD"/>
 
 	<div id="symptoms">
-		<form>
-			<label for="symptoms">Symptoms:</label>
+			<label for="symptoms" class="title">Symptoms:</label>
+		<div id="s-options">
+			<input type="radio" id="none" name="none" value="none">
+ 			<label for="none">None</label><br>
 
-			<select name="symptoms" id="symptoms">
-				<option value="fever">Fever</option>
-				<option value="drycough">Dry Cough</option>
-				<option value="tiredness">Tiredness</option>
-				<option value="diffbreathe">Difficulty Breathing</option>
-				<option value="chestpain">Chest Pain</option>
-				<option value="sorethroat">Sore Throat</option>
-				<option value="headache">Headache</option>
-			</select>
+			<input type="radio" id="fever" name="fever" value="fever">
+ 			<label for="fever">Fever</label><br>
 
-	
-		</form>
+			<input type="radio" id="drycough" name="drycough" value="drycough">
+ 			<label for="drycough">Dry Cough</label><br>
+
+			<input type="radio" id="tiredness" name="tiredness" value="tiredness">
+ 			<label for="tiredness">Tiredness</label><br>
+
+			<input type="radio" id="diffbreath" name="diffbreathing" value="diffbreath">
+ 			<label for="diffbreath">Difficulty of Breathing</label><br>
+
+			<input type="radio" id="chestpain" name="chestpain" value="chestpain">
+ 			<label for="chestpain">Chestpain</label><br>
+
+			<input type="radio" id="sorethroat" name="sorethroat" value="sorethroat">
+ 			<label for="sorethroat">Sore Throat</label><br>
+
+			<input type="radio" id="headache" name="headache" value="headache">
+ 			<label for="headaches">Headaches</label><br>
+		</div>
+		
+		
 	</div>
 
 	<div id="mood">
-		<form>
-			<label for="mood">Mood:</label>
+		
+			<label for="mood" class="title">Mood:</label>
 
 			<select name="mood" id="mood">
+				 <option value="" disabled selected>Choose</option>
 				<option value="happy">Happy</option>
 				<option value="sad">Sad</option>
 				<option value="neutral">Neutral</option>
 			</select>
 
 	
-		</form>
+		
 	</div>
 
 	<div id="water">
-		<form>
-			<label for="water">Water Intake:</label>
+	
+			<label for="water" class="title">Water Intake:</label>
 			<input type="number" id="water" name="water" min="0">
-		</form>
+	
 	</div>
 
 	<div id="stress">
-		<form>
-			<label for="stress">Stress Level:</label>
+	
+			<label for="stress" class="title">Stress Level:</label>
 			<input type="number" id="stress" name="stress" min="1" max="10" placeholder="1(lowest) - 10(highest)">
-		</form>
+		<div id="s-options">
+			<input type="radio" id="1" name="s-options" value="1">
+ 			<label for="1">1</label><br>
+
+			<input type="radio" id="2" name="s-options" value="2">
+ 			<label for="2">2</label><br>
+
+			<input type="radio" id="3" name="s-options" value="3">
+ 			<label for="3">3</label><br>
+
+			<input type="radio" id="4" name="s-options" value="4">
+ 			<label for="4">4</label><br>
+
+			<input type="radio" id="5" name="s-options" value="5">
+ 			<label for="5">5</label><br>
+
+			<input type="radio" id="6" name="s-options" value="6">
+ 			<label for="6">6</label><br>
+
+			<input type="radio" id="7" name="s-options" value="7">
+ 			<label for="7">7</label><br>
+
+			<input type="radio" id="8" name="s-options" value="8">
+ 			<label for="8">8</label><br>
+
+			<input type="radio" id="9" name="s-options" value="9">
+ 			<label for="9">9</label><br>
+
+			<input type="radio" id="10" name="s-options" value="10">
+ 			<label for="10">10</label><br>
+		</div>
+
 	</div>
 
 
 	<div id="entry">
-		<form>
-			Daily Entry
+	
+			<label  class="title">Daily Entry</label>
 			<br><textarea rows = "5" cols = "60" name = "description">
          		</textarea><br>
-		</form>
+		
 	</div>
+	
 
-	<input type="submit">
+  	<button type="submit" value="Submit" id="submit">Submit</button>
+  	<button type="reset" value="Reset" id="reset">Reset</button>
+	</form>
 </div>
 
 </body>
