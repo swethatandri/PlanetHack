@@ -91,13 +91,14 @@
 	<img src="headericon.png" width="150" class="icon">
 </header>
 
-<body>
+<body onload= "Test()" >
 <p id="sched">SCHEDULE</p>
 
 <div id="schedulemain">
 	
 	<div id="date" class="schedulemain">
-		<form>
+
+<form>
 			<label class="title">Date:</label>
 
 			<input type="text" name="input" placeholder="YY/MM/DD">
@@ -128,7 +129,7 @@
  			<label for="sorethroat">Sore Throat</label><br>
 
 			<input type="radio" id="headache" name="headache" value="headache">
- 			<label for="headaches">Headaches</label><br>
+ 			<label for="headache">Headaches</label><br>
 		</div>
 		
 		
@@ -197,14 +198,32 @@
 	<div id="entry" class="schedulemain">
 	
 			<label  class="title">Daily Entry</label>
-			<br><textarea rows = "5" cols = "60" name = "description"></textarea><br>
+			<br><textarea rows = "5" cols = "60"  id = "day" name = "description"></textarea><br>
 		
 	</div>
 	
 
-  	<button type="submit" value="Submit" id="submit">Submit</button>
+  	<button type="button" value="Submit" id="submit" onclick="myFunction()" >Submit</button>
   	<button type="reset" value="Reset" id="reset">Reset</button>
+
+
 	</form>
+
+	<p id="demo"> </p>
+
+	<script>
+    function myFunction() {
+    var x = document.getElementById("day").value;
+    alert(x);
+    document.getElementById("demo").innerHTML = x;
+
+}
+
+   function Test()
+   {
+     alert("Hello world");
+   }
+</script>
 </div>
 
 <footer>
